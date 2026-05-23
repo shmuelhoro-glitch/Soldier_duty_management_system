@@ -10,7 +10,7 @@ def find_soldier_by_id(soldier_id: int) -> dict | None:
 """Searching for a shift by name in the list of shifts"""
 def find_duty_by_name(duties: list, duty_name: str) -> dict | None:
     for duty in duties:
-        if duty == duty_name:
+        if duty["name"] == duty_name:
             return duty
     return None
 
