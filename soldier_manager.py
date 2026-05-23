@@ -21,8 +21,3 @@ def remove_soldier(soldier_id: int) -> None:
 def get_all_soldiers() -> list:
     return soldiers_data
 
-add_soldier(19876,"dsoaop")
-add_soldier(548142,"shmuel")
-print(get_all_soldiers())
-remove_soldier(19876)
-print(get_all_soldiers())
