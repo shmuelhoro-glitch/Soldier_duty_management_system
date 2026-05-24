@@ -9,7 +9,7 @@ def show_menu() -> None:
           f"3. show list of all soldiers enter 3\n"
           f"4. add duty for soldier enter 4\n"
           f"5. update duty's status enter 5\n"
-          f"6. show soldier's dutys enter 6\n"
+          f"6. show soldier's duties enter 6\n"
           f"7. enter exit or 7 for close the system ")
 
 def get_user_choice() -> str:
@@ -101,8 +101,7 @@ def main() -> None:
             break
         else:
             print("Please select an existing option.")
-
+        time.sleep(3)
         if user_choice != "3" and user_choice != "6":
-            time.sleep(3)
             clear_terminal()
 main()
