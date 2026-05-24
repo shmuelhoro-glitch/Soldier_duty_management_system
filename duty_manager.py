@@ -4,7 +4,7 @@ def add_duty_to_soldier(soldier_id: int, duty_name: str, day: str) -> None:
     soldier = find_soldier_by_id(soldier_id)
     if soldier == None:
         raise KeyError("ID isn't exists")
-    elif soldier_has_duty(duty_name):
+    elif soldier_has_duty(soldier,duty_name):
         raise ValueError("A duty with this name already exists for a soldier ")
     elif not is_valid_day(day):
         raise ValueError("Invalid day")
