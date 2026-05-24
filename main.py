@@ -1,3 +1,5 @@
+"""https://github.com/shmuelhoro-glitch/Soldier_duty_management_system.git"""
+
 from soldier_manager import add_soldier,remove_soldier,get_all_soldiers
 from duty_manager import add_duty_to_soldier,update_duty_status,get_soldier_duties
 import time
@@ -81,6 +83,7 @@ def clear_terminal():
 
 
 def main() -> None:
+    print("welcome to the smartest system for manager and control❗🤖 ")
     while True:
         show_menu()
         user_choice = get_user_choice()

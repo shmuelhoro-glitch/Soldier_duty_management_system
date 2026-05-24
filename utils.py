@@ -23,7 +23,7 @@ def is_valid_status(status: str) -> bool:
 
 """Checks if the name is valid (not empty)"""
 def is_valid_name(name: str) -> bool:
-    if name not in [""," ",None,"  "]:
+    if name and name.strip():
         return True
     return False
 
