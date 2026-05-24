@@ -1,6 +1,7 @@
 from soldier_manager import add_soldier,remove_soldier,get_all_soldiers
 from duty_manager import add_duty_to_soldier,update_duty_status,get_soldier_duties
 import time
+import os
 
 def show_menu() -> None:
     print(f"1. add soldier enter 1\n"
@@ -72,10 +73,15 @@ def handle_view_soldier_duties() -> None:
     except KeyError as Key_error:
         print(f"oops error❌: {Key_error}")
 
+def clear_terminal():
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+
 
 def main() -> None:
     while True:
-        time.sleep(2)
         show_menu()
         user_choice = get_user_choice()
         if user_choice == "1":
@@ -96,4 +102,7 @@ def main() -> None:
         else:
             print("Please select an existing option.")
 
+        if user_choice != "3" and user_choice != "6":
+            time.sleep(3)
+            clear_terminal()
 main()
